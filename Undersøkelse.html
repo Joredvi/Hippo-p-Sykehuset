@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Velg undersøkelse</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #e0f7fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #0077b6;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .bubble-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bubble {
+      background-color: #a2d2ff;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      text-align: center;
+      color: #023047;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .bubble:hover {
+      transform: scale(1.1);
+      background-color: #90e0ef;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hva skal Hippo gjøre i dag?</h1>
+  <div class="bubble-container">
+    <div class="bubble" onclick="window.location.href='blodprove.html'">Blodprøve</div>
+    <div class="bubble" onclick="window.location.href='rontgen.html'">Røntgen</div>
+    <div class="bubble" onclick="window.location.href='sonde.html'">Sonde</div>
+  </div>
+</body>
+</html>
